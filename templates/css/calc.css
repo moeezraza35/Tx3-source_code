@@ -1,0 +1,86 @@
+*{
+    margin: 0%;
+    padding: 0%;
+    font-family: Arial, Helvetica, sans-serif;
+}
+body{
+    height: 100vh;
+    width: 100%;
+    overflow: hidden;
+}
+header button{
+    height: 20px;
+    width: 20px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: darkblue;
+}
+aside{
+    float: left;
+    height: calc(100vh - 20px);
+    overflow: hidden;
+    transition: width 0.6s;
+}
+aside *{
+    margin: 10px;
+}
+main{
+    transition: all 0.6s;
+    padding: 5px;
+    overflow: hidden;
+    height: calc(100vh - 25px);
+    width: max-content;
+    text-align: center;
+}
+.bar{
+    font-size: larger;
+    border: none;
+    height: 35px;
+    width: 300px;
+    text-align: right;
+}
+table{
+    width: 300px;
+}
+td{
+    height: 72px;
+}
+.btn{
+    transition: all 0.6s;
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+.oper{
+    background-color: #FCC404;
+    color: black;
+}
+.blu{
+    background-color: #048CC4;
+    color: aliceblue;
+}
+.red{
+    background-color: #FC0404;
+    color: aliceblue;
+}
+#history fieldset{
+    border: 1px solid silver;
+    border-radius: 5px;}
+#history{
+    height: 270px;
+    overflow-y: auto;
+    border: 1px solid silver;
+    border-radius: 5px;
+}
+#history p{
+    border-radius: 3px;
+    font-size: 12px;
+    padding: 2px;
+}
+#clrHis{
+    transition: all 0.6s;
+    cursor: pointer;
+    padding: 10px;
+    width: 80%;
+}

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <script type="text/javascript" src="/eel.js"></script>
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="shortcut icon" href="icon/icon.svg" type="image/x-icon">
+    <link rel="stylesheet" href="css/calc.css">
+    <link rel="stylesheet" href="css/light.css" id="theme">
+    <title>Calculator</title>
+</head>
+<body onresize="setsize()">
+    <header>
+        <button onclick="showaside()">&lt;</button>
+    </header>
+    <aside>
+        <h1>Settings</h1>
+        <fieldset>
+            <legend>Theme</legend>
+            <p><input type="radio" name="theme" id="light" onclick="changetheme('light')" checked><label for="light">Bright</label></p>
+            <p><input type="radio" name="theme" id="dark" onclick="changetheme('dark')"><label for="dark">Dark</label></p>
+        </fieldset>
+        <h1>History</h1>
+        <div id="history"></div>
+        <button id="clrHis" onclick="clearHis()">
+            Clear History
+        </button>
+    </aside>
+    <main>
+        <div class="screen">
+            <p class="bar" id="ques"></p>
+            <input type="text" class="bar" id="inbar">
+            <p class="bar" id="ans"></p>
+        </div>
+        <table class="panel">
+            <!--
+                buttons be Like
+                AC, <--
+                /, ^, R, \
+                1, 2, 3, +
+                4, 5, 6, -
+                7, 8, 9, *
+                0, ., =
+            -->
+            <tr>
+                <td colspan="2"><button type="button" class="btn blu" onclick="location.reload()">AC</button></td>
+                <td colspan="2"><button type="button" class="btn red" onclick="backSpace()">←</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" class="btn oper" onclick="add_operator('/')">/</button></td>
+                <td><button type="button" class="btn oper" onclick="add_operator('^')">^</button></td>
+                <td><button type="button" class="btn oper" onclick="add_operator('v')">√</button></td>
+                <td><button type="button" class="btn oper" onclick="add_operator('\\')">\</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" class="btn norm" onclick="write_in_bar(1)">1</button></td>
+                <td><button type="button" class="btn norm" onclick="write_in_bar(2)">2</button></td>
+                <td><button type="button" class="btn norm" onclick="write_in_bar(3)">3</button></td>
+                <td><button type="button" class="btn oper" onclick="add_operator('+')">+</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" class="btn norm" onclick="write_in_bar(4)">4</button></td>
+                <td><button type="button" class="btn norm" onclick="write_in_bar(5)">5</button></td>
+                <td><button type="button" class="btn norm" onclick="write_in_bar(6)">6</button></td>
+                <td><button type="button" class="btn oper" onclick="add_operator('-')">-</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" class="btn norm" onclick="write_in_bar(7)">7</button></td>
+                <td><button type="button" class="btn norm" onclick="write_in_bar(8)">8</button></td>
+                <td><button type="button" class="btn norm" onclick="write_in_bar(9)">9</button></td>
+                <td><button type="button" class="btn oper" onclick="add_operator('x')">x</button></td>
+            </tr>
+            <tr>
+                <td><button type="button" class="btn norm" onclick="write_in_bar(0)">0</button></td>
+                <td><button type="button" class="btn norm" onclick="write_in_bar('.')">.</button></td>
+                <td colspan="2"><button type="button" class="btn blu" onclick="calculate()">=</button></td>
+            </tr>
+        </table>
+    </main>
+    <script src="calc.js"></script>
+</body>
+</html>

@@ -1,0 +1,24 @@
+header{background-color: #B4BCC2;}
+main{background-color: #E4E4E4;}
+.bar{background-color: aliceblue; color: black;}
+.norm{background-color: #C6CCD6; color: black;}
+.norm:hover{background-color: #babfc9;}
+.oper:hover{background-color: #ffce2c;}
+.blu:hover{background-color: #2993c0;}
+.red:hover{background-color: #f32a2a;}
+aside{background-color: azure;}
+#history{
+    background-color: rgb(233, 233, 233);
+}
+#history p{
+    background-color: rgb(216, 216, 216);
+}
+#clrHis{
+    background-color: rgb(216, 216, 216);
+    border: 1px solid silver;
+    border-radius: 2px;
+    color: black;
+}
+#clrHis:hover{
+    background-color: rgb(192, 192, 192);
+}
