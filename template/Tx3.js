@@ -15,17 +15,6 @@ const r3c1 = document.getElementById("r3c1");
 const r3c2 = document.getElementById("r3c2");
 const r3c3 = document.getElementById("r3c3");
 
-function setsize(){
-    var x = 445;
-    var y = 500;
-    if(window.innerWidth != x || window.innerHeight != y){
-        window.resizeTo(x,y);
-        var Width = x - innerWidth;
-        var Height = y - innerHeight;
-        window.resizeTo(x + Width, y + Height);
-    };
-};
-
 function ShowGame(){    // Hidding menu and showing game page
     startup.style.display = "none";
     gameBox.style.display = "block";

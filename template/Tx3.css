@@ -47,7 +47,8 @@ header img{
     margin: 10px;
 }
 .gameMenu button{
-    border: 1px solid blue;
+    width: 200px;
+    border: none;
     background-color: #3774E0;
     color: white;
     padding: 10px;
