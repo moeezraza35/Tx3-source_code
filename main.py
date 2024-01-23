@@ -194,4 +194,4 @@ def PyMove(x,y):
 def PyReset():
     tx3.reset()
 
-eel.start("Tx3.html", size=('445','500'))
+eel.start("Tx3.html", size=('447','502'))

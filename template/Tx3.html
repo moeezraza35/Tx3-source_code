@@ -13,32 +13,34 @@
 
     <title>Tx3</title>
 </head>
-<body onresize="setsize()">
+<body>
     <header>
         <img src="icon/icon.png" alt="Tx3-logo.png">Tx3
     </header>
-    <div class="startup dialog">
-        <p class="gameMenu"><button onclick="game_p1()">Play as 1P</button></p>
-        <p class="gameMenu"><button onclick="game_p2()">Play as 2P</button></p>
-    </div>
-    <div class="game dialog">
-        <p class="gameRow">
-            <button class="noo" id="r1c1" onclick="move(0,0)"></button>
-            <button class="noo" id="r1c2" onclick="move(0,1)"></button>
-            <button class="noo" id="r1c3" onclick="move(0,2)"></button>
-        </p>
-        <p class="gameRow">
-            <button class="noo" id="r2c1" onclick="move(1,0)"></button>
-            <button class="noo" id="r2c2" onclick="move(1,1)"></button>
-            <button class="noo" id="r2c3" onclick="move(1,2)"></button>
-        </p>
-        <p class="gameRow">
-            <button class="noo" id="r3c1" onclick="move(2,0)"></button>
-            <button class="noo" id="r3c2" onclick="move(2,1)"></button>
-            <button class="noo" id="r3c3" onclick="move(2,2)"></button>
-        </p>
-        <button class="reset" onclick="Reset()">Reset</button>
-    </div>
+    <main>
+        <div class="startup dialog">
+            <p class="gameMenu"><button onclick="game_p1()">Play as 1P</button></p>
+            <p class="gameMenu"><button onclick="game_p2()">Play as 2P</button></p>
+        </div>
+        <div class="game dialog">
+            <p class="gameRow">
+                <button class="noo" id="r1c1" onclick="move(0,0)"></button>
+                <button class="noo" id="r1c2" onclick="move(0,1)"></button>
+                <button class="noo" id="r1c3" onclick="move(0,2)"></button>
+            </p>
+            <p class="gameRow">
+                <button class="noo" id="r2c1" onclick="move(1,0)"></button>
+                <button class="noo" id="r2c2" onclick="move(1,1)"></button>
+                <button class="noo" id="r2c3" onclick="move(1,2)"></button>
+            </p>
+            <p class="gameRow">
+                <button class="noo" id="r3c1" onclick="move(2,0)"></button>
+                <button class="noo" id="r3c2" onclick="move(2,1)"></button>
+                <button class="noo" id="r3c3" onclick="move(2,2)"></button>
+            </p>
+            <button class="reset" onclick="Reset()">Reset</button>
+        </div>
+    </main>
 </body>
 <script src="Tx3.js"></script>
 </html>
