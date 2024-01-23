@@ -74,4 +74,4 @@ def py_clearHis():
     file.write("")
     file.close()
 
-eel.start("calculator.html")
+eel.start("calculator.html", size=("312","602"))

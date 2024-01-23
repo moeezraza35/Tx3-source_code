@@ -6,7 +6,6 @@
 body{
     height: 100vh;
     width: 100%;
-    overflow: hidden;
 }
 header button{
     height: 20px;
@@ -17,21 +16,54 @@ header button{
     color: darkblue;
 }
 aside{
-    float: left;
+    box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.5);
     height: calc(100vh - 20px);
     overflow: hidden;
-    transition: width 0.6s;
+    transition: all 0.6s;
+    width: 200px;
 }
 aside *{
     margin: 10px;
 }
 main{
-    transition: all 0.6s;
     padding: 5px;
     overflow: hidden;
     height: calc(100vh - 25px);
     width: max-content;
     text-align: center;
+    height: max-content;
+}
+/* Big view */
+@media screen and (min-width: 526px) {
+    aside{
+        float: left;
+    }
+    header button{
+        display: none;
+    }
+    header{
+        height: 20px
+    }
+    main{
+        position: static;
+        margin: auto;
+    }
+}
+/* Small window view */
+@media screen and (max-width: 527px){
+    aside{
+        position: absolute;
+        box-shadow: 2px 1px 5px rgba(0, 0, 0, 0.5);
+        z-index: -1;
+        opacity: 0;
+    }
+    main{
+        margin: auto;
+    }
+    aside.active{
+        z-index: 1;
+        opacity: 1;
+    }
 }
 .bar{
     font-size: larger;
@@ -64,7 +96,7 @@ td{
     background-color: #FC0404;
     color: aliceblue;
 }
-#history fieldset{
+aside fieldset{
     border: 1px solid silver;
     border-radius: 5px;}
 #history{
@@ -82,5 +114,5 @@ td{
     transition: all 0.6s;
     cursor: pointer;
     padding: 10px;
-    width: 80%;
+    width: 180px;
 }

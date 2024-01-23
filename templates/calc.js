@@ -13,35 +13,13 @@ let operator = '';
 
 // JS functions
 
-function setsize() {    // Resize the screen size
-    var y = 600;
-    var x;
-  
-    if(sideBar.style.width != "0px"){x = 510;}
-    else{x = 310;};
-  
-    if(window.innerWidth != x || window.innerHeight != y){
-        window.resizeTo(x, y);
-        var InnerWidth = x - window.innerWidth;
-        var InnerHeight = y - window.innerHeight;
-        window.resizeTo(x + InnerWidth, y + InnerHeight);
-    };
-};
-
 function showaside(){   // Show side bar & other options
-    if(sideBar.style.width != "0px"){
-        sideBar.style.width = "0px";
-        while(sideBar.style.width > "0px"){
-            var currentTime = new Date().getTime();
-            while(currentTime + 1000 >= new Date().getTime()){};
-        };
-        historyBar.innerHTML = '';
+    if(sideBar.className == "active"){
+        sideBar.className = "";
     }
     else{
-        sideBar.style.width = "200px";
-        loadHistory();
+        sideBar.className = "active";
     };
-    setsize();
 };
 
 function write_in_bar(key){    // Writing in calculator bar
@@ -122,6 +100,4 @@ async function clearHis(){
 
 // Function calling on start up
 
-sideBar.style.width="0px";
-setsize();
 loadtheme();
